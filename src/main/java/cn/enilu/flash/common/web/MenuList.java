@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 public class MenuList {
-    private List<Menu> menus = new ArrayList<>();
+    private List<Menu> menus = new ArrayList<Menu>();
 
     public List<Menu> getMenus() {
         return menus;
@@ -20,7 +20,7 @@ public class MenuList {
     }
 
     public List<Menu> getFilteredMenus(Set<String> userPermissions) {
-        List<Menu> result = new ArrayList<>();
+        List<Menu> result = new ArrayList<Menu>();
         for (Menu menu : menus) {
             if (!menu.getFilteredItems(userPermissions).isEmpty()) {
                 result.add(menu);

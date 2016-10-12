@@ -21,7 +21,7 @@ public class RoleModel extends Role {
     
     public List<Long> getPermissionIds() {
         if (permissions == null) {
-            return new ArrayList<>();
+            return new ArrayList<Long>();
         }
         return Lists.map(permissions, "id");
     }

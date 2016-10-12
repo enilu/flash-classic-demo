@@ -93,7 +93,7 @@ public class RoleController extends BaseController {
 	public String editPermissions(@PathVariable("id") Long id, Model model) {
 		RoleModel role = roleService.load(id);
 		model.addAttribute("role", role);
-		model.addAttribute("rolePermissionIds", new HashSet<>(role.getPermissionIds()));
+		model.addAttribute("rolePermissionIds", new HashSet<Long>(role.getPermissionIds()));
 		model.addAttribute("allPermissions", roleService.findAllPermissions());
 		
 		setBreadcrumb("角色管理", "/roles", role.getName(), "/roles/" + role.getId(), "权限管理", null);

@@ -213,7 +213,7 @@ public class UserController extends BaseController {
     public String editRoles(@PathVariable("id") Long id, Model model) {
         UserModel user = userService.load(id);
         model.addAttribute("user", user);
-        model.addAttribute("userRoleIds", new HashSet<>(user.getRoleIds()));
+        model.addAttribute("userRoleIds", new HashSet<Long>(user.getRoleIds()));
         model.addAttribute("allRoles", userService.findAllRoles());
 
         setBreadcrumb("用户管理", "/users", user.getName(), "/users/" + user.getId(), "角色管理", null);

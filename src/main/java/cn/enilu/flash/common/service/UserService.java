@@ -110,7 +110,7 @@ public class UserService extends EntityService<User, Long> {
 		List<UserRole> oldUserRoles = db.from(UserRole.class)
 				.where("user_id", userId).all(UserRole.class);
 
-		Set<Long> idSet = new HashSet<>(Arrays.asList(roleIds));
+		Set<Long> idSet = new HashSet<Long>(Arrays.asList(roleIds));
 		for (UserRole userRole : oldUserRoles) {
 			if (idSet.contains(userRole.getRoleId())) {
 				idSet.remove(userRole.getRoleId());

@@ -53,7 +53,7 @@ public class RoleService extends EntityService<Role, Long> {
 		List<RolePermission> oldRolePermissions = db.from(RolePermission.class)
 				.where("role_id", roleId).all(RolePermission.class);
 
-		Set<Long> idSet = new HashSet<>(Arrays.asList(permissionIds));
+		Set<Long> idSet = new HashSet<Long>(Arrays.asList(permissionIds));
 		for (RolePermission rolePermission : oldRolePermissions) {
 			if (idSet.contains(rolePermission.getPermissionId())) {
 				idSet.remove(rolePermission.getPermissionId());

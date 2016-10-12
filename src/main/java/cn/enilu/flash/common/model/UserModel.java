@@ -20,7 +20,7 @@ public class UserModel extends User {
 
     public List<Long> getRoleIds() {
         if (roles == null) {
-            return new ArrayList<>();
+            return new ArrayList<Long>();
         }
         return Lists.map(roles, "id");
     }

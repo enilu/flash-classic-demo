@@ -7,7 +7,7 @@ public class Menu {
         private String name;
         private String link;
         private String icon;
-        private Set<String> permissions = new HashSet<>();
+        private Set<String> permissions = new HashSet<String>();
 
         public MenuItem() {
         }
@@ -52,7 +52,7 @@ public class Menu {
     }
 
     private String name;
-    private List<MenuItem> items = new ArrayList<>();
+    private List<MenuItem> items = new ArrayList<MenuItem>();
 
     public String getName() {
         return name;
@@ -71,7 +71,7 @@ public class Menu {
     }
     
     public List<MenuItem> getFilteredItems(Set<String> userPermissions) {
-        List<MenuItem> result = new ArrayList<>();
+        List<MenuItem> result = new ArrayList<MenuItem>();
         for (MenuItem item : items) {
             if (userPermissions.containsAll(item.getPermissions())) {
                 result.add(item);
