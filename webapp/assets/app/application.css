@@ -1,0 +1,71 @@
+/*
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 90%;
+  margin-top: 20px;
+}
+*/
+
+.validation-error {
+  display: inline-block;
+  padding-left: 5px;
+  vertical-align: middle;
+  color: #b94a48;
+}
+
+.login-box .validation-error {
+	margin-left: 15px;
+}
+
+.basic-form {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+form .control-group .controls span.error {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+  color: #b94a48;
+  background: url(/assets/app/images/fail.gif) no-repeat left center;
+  padding-left: 20px;
+}
+
+form .control-group .controls span.error.valid {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+  color: green;
+  background: url(/assets/app/images/pass.gif) no-repeat left center;
+  width: 16px;
+  height: 16px;
+}
+
+form.login-form span.error {
+	display: none;
+}
+
+form.login-form .highlight {
+  background-color: #FABB3D;
+}
+
+.widget .metric {
+  padding: 5px 10px;
+  float: left;
+  font-weight: bold;
+}
+
+.widget .metric .num {
+  display: inline;
+  font-size: 60px;
+}
