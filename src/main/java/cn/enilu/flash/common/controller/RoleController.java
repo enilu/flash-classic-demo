@@ -1,6 +1,7 @@
 package cn.enilu.flash.common.controller;
 
 
+import cn.enilu.flash.common.aop.SystemControllerLog;
 import cn.enilu.flash.core.db.Pagination;
 import cn.enilu.flash.core.lang.Beans;
 import cn.enilu.flash.core.util.JsonResponse;
@@ -45,6 +46,7 @@ public class RoleController extends BaseController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
+	@SystemControllerLog(description="创建角色")
 	public String create(@Valid Role role, BindingResult result, Model model,
 			RedirectAttributes redirectAttrs,HttpServletRequest request) {
 		model.addAttribute("role", role);
@@ -76,6 +78,7 @@ public class RoleController extends BaseController {
 	}
 
 	@RequestMapping(value = "/{id:^\\d+$}", method = RequestMethod.PUT)
+	@SystemControllerLog(description="更新角色")
 	public String update(@PathVariable("id") Long id, Role input, Model model) {
 		Role role = roleService.find(id); 
 		Beans.extend(role, input, "name", "description");
@@ -84,6 +87,7 @@ public class RoleController extends BaseController {
 	}
 
 	@RequestMapping(value = "/{id:^\\d+$}", method = RequestMethod.DELETE)
+	@SystemControllerLog(description="删除角色")
 	public @ResponseBody
 	JsonResponse destroy(@PathVariable("id") Long id,
 			RedirectAttributes redirectAttrs) {
@@ -107,6 +111,7 @@ public class RoleController extends BaseController {
 	}
 
 	@RequestMapping(value = "/{id:^\\d+$}/save_permissions", method = RequestMethod.POST)
+	@SystemControllerLog(description="修改权限")
 	public String savePermissions(@PathVariable("id") Long id, Long[] permissionIds,
 								  Model model,
 								  RedirectAttributes redirectAttributes) {

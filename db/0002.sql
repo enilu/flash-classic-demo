@@ -33,3 +33,19 @@ create table user_role(
   created_at timestamp not null,
   unique key uk_user_role_user_id_role_id(user_id, role_id)
 ) engine=InnoDB default charset=utf8 comment '用户,角色关联表';
+
+
+CREATE TABLE logs (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  operator int(11) NOT NULL,
+  operator_name varchar(64),
+  action varchar(64),
+  operate_time datetime DEFAULT NULL,
+  class_name varchar(128),
+  method_name varchar(64),
+  ip varchar(32),
+  exception_code varchar(128),
+  exception_detail text,
+  params text,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;

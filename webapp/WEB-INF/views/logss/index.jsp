@@ -34,12 +34,12 @@
 </form:form>
 </div>
 <display:table name="logss.data" id="logs_" class="table table-striped table-bordered">
-	<display:column title="ID">
-		<a href="/logss/${logs_.id}">${logs_.id}</a>
+	<display:column property="id" title="ID" />
+	<display:column title="操作内容">
+		<a href="/logss/${logs_.id}">${logs_.action}</a>
 	</display:column>
-	<display:column property="orderNo" title="订单编号" />
-	<display:column property="operator" title="操作人" />
-	<display:column property="action" title="操作类型" />
+	<display:column property="ip" title="IP" />
+	<display:column property="operatorName" title="操作人" />
 </display:table>
 <z:pagination name="logss" />
 

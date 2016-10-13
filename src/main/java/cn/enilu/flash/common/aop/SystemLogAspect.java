@@ -80,7 +80,7 @@ public class SystemLogAspect {
 
                 // 保存数据库
                 logsService.create(log);
-                System.out.println("=====前置通知结束=====");
+                logger.debug("=====前置通知结束=====");
             } catch (Exception e) {
                 // 记录本地异常日志
                 logger.error("==前置通知异常==");

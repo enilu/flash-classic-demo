@@ -1,5 +1,6 @@
 package cn.enilu.flash.common.controller;
 
+import cn.enilu.flash.common.aop.SystemControllerLog;
 import cn.enilu.flash.common.entity.User;
 import cn.enilu.flash.common.service.UserService;
 import cn.enilu.flash.web.auth.UserContext;
@@ -57,6 +58,7 @@ public class SessionController extends BaseController {
     }
 
     @RequestMapping(value = "new", method = RequestMethod.POST)
+    @SystemControllerLog(description="登录系统")
     public String login(HttpServletRequest request, HttpServletResponse response,
                         @Valid LoginForm loginForm, BindingResult result, Model model) {
         if (result.hasErrors()) {

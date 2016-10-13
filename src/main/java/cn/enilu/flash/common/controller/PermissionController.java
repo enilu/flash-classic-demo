@@ -1,5 +1,6 @@
 package cn.enilu.flash.common.controller;
 
+import cn.enilu.flash.common.aop.SystemControllerLog;
 import cn.enilu.flash.common.entity.Permission;
 import cn.enilu.flash.common.service.PermissionService;
 import cn.enilu.flash.core.db.Pagination;
@@ -33,7 +34,7 @@ public class PermissionController extends BaseController {
 		Pagination<Permission> permissions = permissionService.search(getQueryForm(request));
 		model.addAttribute("permissions", permissions);
 
-		setBreadcrumb("首页", "/", "权限管理", null);
+		setBreadcrumb("权限管理", null);
 		return "permissions/index";
 	}
 
@@ -41,16 +42,17 @@ public class PermissionController extends BaseController {
 	@RequestMapping(value = "new", method = RequestMethod.GET)
 	public String new0(Model model) {
 		model.addAttribute("permission", new Permission());
-		setBreadcrumb("首页", "/", "权限管理", "/permissions","新建",null);
+		setBreadcrumb("权限管理", "/permissions","新建",null);
 		return "permissions/new";
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
+	@SystemControllerLog(description="创建权限")
 	public String create(@Valid Permission permission, BindingResult result, Model model,
 			RedirectAttributes redirectAttrs) {
 		model.addAttribute("permission", permission);
 		if (result.hasErrors()) {
-			setBreadcrumb("首页", "/", "权限管理", "/permissions","新建",null);
+			setBreadcrumb( "权限管理", "/permissions","新建",null);
 			return "permissions/new";
 		}
 		permission.setUpdatedAt(DateTime.now());
@@ -64,7 +66,7 @@ public class PermissionController extends BaseController {
 	public String show(@PathVariable("id") Long id, Model model) {
 		Permission permission = permissionService.find(id);
 		model.addAttribute("permission", permission);
-		setBreadcrumb("首页", "/", "权限管理", "/permissions", permission.getDescription(), null);
+		setBreadcrumb( "权限管理", "/permissions", permission.getDescription(), null);
 		return "permissions/show";
 	}
 
@@ -72,11 +74,12 @@ public class PermissionController extends BaseController {
 	public String edit(@PathVariable("id") Long id, Model model) {
 		Permission permission = permissionService.find(id);
 		model.addAttribute("permission", permission);
-		setBreadcrumb("首页", "/", "权限管理", "/permissions","编辑"+permission.getDescription(),null);
+		setBreadcrumb( "权限管理", "/permissions","编辑"+permission.getDescription(),null);
 		return "permissions/edit";
 	}
 
 	@RequestMapping(value = "/{id:^\\d+$}", method = RequestMethod.PUT)
+	@SystemControllerLog(description="更新权限")
 	public String update(@PathVariable("id") Long id, Permission input, Model model) {
 		Permission permission = permissionService.find(id); 
 		Beans.extend(permission, input, "name", "description");
@@ -86,6 +89,8 @@ public class PermissionController extends BaseController {
 	}
 
 	@RequestMapping(value = "/{id:^\\d+$}", method = RequestMethod.DELETE)
+
+	@SystemControllerLog(description="删除权限")
 	public @ResponseBody
 	JsonResponse destroy(@PathVariable("id") Long id,
 			RedirectAttributes redirectAttrs) {

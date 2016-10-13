@@ -14,7 +14,7 @@
     <link href="/assets/jquery.uniform/themes/default/css/uniform.default.css" rel="stylesheet">
     <link href="/assets/app/application.css" rel="stylesheet">
     <style type="text/css">
-        .login-page{background-image: url(/assets/app/images/login/2.jpg);}
+        .login-page{background-image: url(/assets/app/images/welcome.jpg);}
         .login-box{background: url(/assets/app/images/login/bg-white-lock.png) repeat;}
         .login-logo{margin-bottom: 0px;}
         .login-box-body{padding-top: 0px;}

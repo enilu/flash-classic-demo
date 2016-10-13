@@ -35,10 +35,11 @@
     </form:form>
 </div>
 <display:table name="permissions.data" id="permission_" class="table table-striped table-bordered">
-    <display:column title="ID">
-        <a href="/permissions/${permission_.id}">${permission_.id}</a>
+
+    <display:column property="id" title="id"/>
+    <display:column title="权限标识名">
+        <a href="/permissions/${permission_.id}">${permission_.name}</a>
     </display:column>
-    <display:column property="name" title="权限标识名"/>
     <display:column property="description" title="备注"/>
     <display:column property="createdAt" title="创建时间"/>
 </display:table>

@@ -26,7 +26,7 @@ public class LogsController extends BaseController {
 		Pagination<Logs> logss = logsService.search(getQueryForm(request));
 		model.addAttribute("logss", logss);
 
-		setBreadcrumb("首页", "/", "日志管理", null);
+		setBreadcrumb( "日志管理", null);
 		return "logss/index";
 	}
 
@@ -36,7 +36,7 @@ public class LogsController extends BaseController {
 		Logs logs = logsService.find(id);
 		model.addAttribute("logs", logs);
 
-		setBreadcrumb("首页", "/", "日志管理", "/logss", logs.getAction());
+		setBreadcrumb( "日志管理", "/logss", logs.getAction(),null);
 		return "logss/show";
 	}
 

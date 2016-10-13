@@ -1,5 +1,6 @@
 package cn.enilu.flash.common.controller;
 
+import cn.enilu.flash.common.aop.SystemControllerLog;
 import cn.enilu.flash.core.db.Pagination;
 import cn.enilu.flash.core.util.JsonResponse;
 import cn.enilu.flash.core.util.MailUtil;
@@ -63,6 +64,7 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
+    @SystemControllerLog(description="添加用户")
     public String create(HttpServletRequest request,
                          @Valid User user, BindingResult result, Model model,
                          RedirectAttributes redirectAttrs) {
@@ -101,6 +103,7 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(value = "/{id:^\\d+$}", method = RequestMethod.PUT)
+    @SystemControllerLog(description="更新用户")
     public String update(@PathVariable("id") Long id, User user, Model model) {
         user.setId(id);
         userService.update(user);
@@ -108,6 +111,7 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(value = "/{id:^\\d+$}", method = RequestMethod.DELETE)
+    @SystemControllerLog(description="删除用户")
     public
     @ResponseBody
     JsonResponse destroy(@PathVariable("id") Long id,
@@ -155,6 +159,7 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(value = "/{id:^\\d+$}/reset_password", method = RequestMethod.PUT)
+    @SystemControllerLog(description="重置密码")
     public String resetPassword(@PathVariable("id") Long id,
                                 @Valid ResetPasswordForm resetPasswordForm, BindingResult result,
                                 Model model, RedirectAttributes redirectAttrs) {
@@ -162,7 +167,7 @@ public class UserController extends BaseController {
         model.addAttribute("user", user);
         if (result.hasErrors()) {
             model.addAttribute("resetPasswordForm", resetPasswordForm);
-            setBreadcrumb("用户管理", "/users", user.getName(), "/users/"+id,"重置密码",null);
+            setBreadcrumb("用户管理", "/users", user.getName(), "/users/" + id, "重置密码", null);
             return "users/reset_password";
         }
         userService.changePassword(id, resetPasswordForm.getPassword());
@@ -189,6 +194,7 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(value = "/change_password", method = RequestMethod.PUT)
+    @SystemControllerLog(description="修改密码")
     public String changePassword(HttpServletRequest request, @Valid ChangePasswordForm changePasswordForm,
                                  BindingResult result, Model model, RedirectAttributes redirectAttrs) {
         User user = getCurrentUser(request);
@@ -225,6 +231,7 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(value = "/{id:^\\d+$}/save_roles", method = RequestMethod.POST)
+    @SystemControllerLog(description="修改权限")
     public String savePermissions(@PathVariable("id") Long id, Long[] roleIds,
                                   Model model,
                                   RedirectAttributes redirectAttributes) {
