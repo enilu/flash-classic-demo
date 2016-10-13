@@ -3,10 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
+<z:breadcrumb breadcrumb="${breadcrumb}"/>
 <div class="row-fluid clearfix">
-  <div class="pull-left">
-    <h3>角色查询</h3>
-  </div>
   <div class="pull-right">
     <a class="btn btn-primary" href="<c:url value="/roles/new"/>">创建角色</a>
   </div>
@@ -22,7 +20,7 @@
 	</div>
 	<div class="control-group">
 		<div class="controls">
-			<button type="submit" class="btn">查询</button>
+			<button type="submit" class="btn btn-primary">查询</button>
 		</div>
 	</div>
 </form:form>

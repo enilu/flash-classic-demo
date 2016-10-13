@@ -1,8 +1,8 @@
 <jsp:include page="/WEB-INF/views/layouts/header.jsp"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
-
-<h3>角色信息</h3>
+<%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
+<z:breadcrumb breadcrumb="${breadcrumb}"/>
 <table class="table table-striped table-bordered">
 	<tr><td>ID</td><td>${role.id}</td></tr>
 	<tr><td>角色名</td><td>${role.name}</td></tr>
@@ -18,6 +18,6 @@
 	<display:column property="description" title="描述"/>
 </display:table>
 
-<a href="<c:url value="/roles/${role.id}/edit"/>" class="btn">编辑</a>
+<a href="<c:url value="/roles/${role.id}/edit"/>" class="btn btn-info">编辑</a>
 <a href="<c:url value="/roles/${role.id}"/>" class="btn btn-danger" data-method="DELETE" data-remote="true" data-redirect="<c:url value="/roles"/>">删除</a>
 <jsp:include page="/WEB-INF/views/layouts/footer.jsp"/>

@@ -32,21 +32,25 @@ public class RoleController extends BaseController {
 	public String index(HttpServletRequest request, Model model) {
 		Pagination<Role> roles = roleService.search(getQueryForm(request));
 		model.addAttribute("roles", roles);
+		setBreadcrumb("角色管理",null);
 		return "roles/index";
 	}
 
 	// new是关键字，用new0代替。
 	@RequestMapping(value = "new", method = RequestMethod.GET)
-	public String new0(Model model) {
+	public String new0(Model model,HttpServletRequest request) {
 		model.addAttribute("role", new Role());
+		setBreadcrumb(request, "角色管理", "/roles", "添加角色", null);
 		return "roles/new";
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String create(@Valid Role role, BindingResult result, Model model,
-			RedirectAttributes redirectAttrs) {
+			RedirectAttributes redirectAttrs,HttpServletRequest request) {
 		model.addAttribute("role", role);
 		if (result.hasErrors()) {
+
+			setBreadcrumb(request, "角色管理", "/roles", "添加角色", null);
 			return "roles/new";
 		}
 
@@ -59,6 +63,7 @@ public class RoleController extends BaseController {
 	public String show(@PathVariable("id") Long id, Model model) {
 		RoleModel role = roleService.load(id);
 		model.addAttribute("role", role);
+		setBreadcrumb("角色管理", "/roles", role.getName(), null);
 		return "roles/show";
 	}
 
@@ -66,6 +71,7 @@ public class RoleController extends BaseController {
 	public String edit(@PathVariable("id") Long id, Model model) {
 		Role role = roleService.find(id);
 		model.addAttribute("role", role);
+		setBreadcrumb("角色管理", "/roles", role.getName(), "/roles/"+id,"编辑", null);
 		return "roles/edit";
 	}
 

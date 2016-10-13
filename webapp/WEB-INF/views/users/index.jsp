@@ -2,10 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
+<z:breadcrumb breadcrumb="${breadcrumb}"/>
 <div class="row-fluid">
-  <div class="pull-left">
-    <h3>用户列表</h3>
-  </div>
   <div class="pull-right">
     <a class="btn btn-primary" href="<c:url value="/users/new"/>">创建用户</a>
   </div>

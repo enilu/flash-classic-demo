@@ -15,12 +15,7 @@
             <display:column property="name" title="权限名"/>
             <display:column property="description" title="描述"/>
         </display:table>
-
-        <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn">保存</button>
-            </div>
-        </div>
+        <button type="submit" class="btn  btn-primary">保存</button>
     </form>
 </div>
 

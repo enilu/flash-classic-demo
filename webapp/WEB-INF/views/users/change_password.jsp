@@ -2,8 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
-<h3>修改密码</h3>
+<%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
+<z:breadcrumb breadcrumb="${breadcrumb}"/>
 <form:form action="/users/change_password" method="POST" validate="true" modelAttribute="changePasswordForm"
            cssClass="basic-form form-horizontal">
   <input type="hidden" name="_method" value="PUT"/>
@@ -35,7 +35,7 @@
   </div>
   <div class="control-group">
     <div class="controls">
-      <button type="submit" class="btn">提交</button>
+      <button type="submit" class="btn  btn-primary">提交</button>
     </div>
   </div>
 </form:form>

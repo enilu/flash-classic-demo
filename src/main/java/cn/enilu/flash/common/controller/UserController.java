@@ -46,6 +46,8 @@ public class UserController extends BaseController {
     public String index(Page page, Model model) {
         Pagination<User> users = userService.search(page.getPage());
         model.addAttribute("users", users);
+
+        setBreadcrumb("用户管理", null);
         return "users/index";
     }
 
@@ -56,7 +58,7 @@ public class UserController extends BaseController {
     }
 
     private String renderNewPage(HttpServletRequest request) {
-        setBreadcrumb(request, "用户中心", "/users", "添加用户", null);
+        setBreadcrumb(request, "用户管理", "/users", "添加用户", null);
         return "users/new";
     }
 
@@ -79,7 +81,7 @@ public class UserController extends BaseController {
         UserModel user = userService.load(id);
         model.addAttribute("user", user);
 
-        setBreadcrumb("用户中心", "/users", user.getName(), null);
+        setBreadcrumb("用户管理", "/users", user.getName(), null);
         return "users/show";
     }
 
@@ -87,7 +89,7 @@ public class UserController extends BaseController {
     public String edit(HttpServletRequest request, @PathVariable("id") Long id, Model model) {
         User user = userService.find(id);
         model.addAttribute("user", user);
-        setBreadcrumb(request, "用户中心", "/users", "编辑用户", null);
+        setBreadcrumb(request, "用户管理", "/users",user.getName(),"/users/"+id, "编辑用户", null);
         return "users/edit";
     }
 
@@ -148,6 +150,7 @@ public class UserController extends BaseController {
         User user = userService.find(id);
         model.addAttribute("user", user);
         model.addAttribute("resetPasswordForm", new ResetPasswordForm());
+        setBreadcrumb("用户管理", "/users", user.getName(), "/users/" + id, "重置密码", null);
         return "users/reset_password";
     }
 
@@ -159,6 +162,7 @@ public class UserController extends BaseController {
         model.addAttribute("user", user);
         if (result.hasErrors()) {
             model.addAttribute("resetPasswordForm", resetPasswordForm);
+            setBreadcrumb("用户管理", "/users", user.getName(), "/users/"+id,"重置密码",null);
             return "users/reset_password";
         }
         userService.changePassword(id, resetPasswordForm.getPassword());
