@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
+<%@taglib  uri="http://www.joda.org/joda/time/tags" prefix="joda"%>
 
 <z:breadcrumb breadcrumb="${breadcrumb}"/>
 <div class="row-fluid">
@@ -13,15 +14,15 @@
 	<div class="control-group">
 		<label class="control-label" for="operator">操作人</label>
 		<div class="controls">
-			<input type="text" name="operator" value="${ qf.get("operator") }" class="" placeholder="操作人" />
+			<input type="text" name="operator_name" value="${ qf.get("operator_name") }" class="" placeholder="操作人" />
 		</div>
 	</div>
 			</div>
 		<div class="col-md-6">
 	<div class="control-group">
-		<label class="control-label" for="action">操作类型</label>
+		<label class="control-label" for="action">操作内容</label>
 		<div class="controls">
-			<input type="text" name="action" value="${ qf.get("action") }" class="" placeholder="操作类型" />
+			<input type="text" name="action" value="${ qf.get("action") }" class="" placeholder="操作内容" />
 		</div>
 	</div>
 			</div>
@@ -40,6 +41,9 @@
 	</display:column>
 	<display:column property="ip" title="IP" />
 	<display:column property="operatorName" title="操作人" />
+	<display:column  title="操作日期">
+		<joda:format value="${logs_.operateTime}" pattern="yyyy-MM-dd hh:mm:ss"/>
+	</display:column>
 </display:table>
 <z:pagination name="logss" />
 

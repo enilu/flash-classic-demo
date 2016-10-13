@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
+<%@ taglib prefix="joda" uri="http://www.joda.org/joda/time/tags" %>
 <z:breadcrumb breadcrumb="${breadcrumb}"/>
 <div class="row-fluid clearfix">
   <div class="pull-right">
@@ -33,7 +34,9 @@
 		<a href="/roles/${role_.id}">${role_.name}</a>
 	</display:column>
 	<display:column property="description" title="描述" />
-	<display:column property="createdAt" title="创建时间" />
+	<display:column title="创建时间">
+		<joda:format value="${role_.createdAt}" pattern="yyyy-MM-dd hh:mm:ss"/>
+	</display:column>
 </display:table>
 <z:pagination name="roles" />
 
