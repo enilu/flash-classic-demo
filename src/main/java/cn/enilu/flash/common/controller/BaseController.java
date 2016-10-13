@@ -39,6 +39,7 @@ public class BaseController extends cn.enilu.flash.web.BaseController {
     }
     
     protected void setBreadcrumb(HttpServletRequest request, Breadcrumb breadcrumb) {
+        breadcrumb.add(0,"首页","/");
         request.setAttribute("breadcrumb", breadcrumb);
     }
 

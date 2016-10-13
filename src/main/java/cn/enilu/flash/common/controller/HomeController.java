@@ -9,7 +9,7 @@ public class HomeController extends BaseController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
-		return "redirect:/users";
+		return "home";
 	}
 
 	@RequestMapping(value = "/no_permission")
