@@ -42,9 +42,8 @@ INSERT INTO `role_permission` VALUES ('7', '2', '5', '2016-10-13 17:57:02', '201
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'admin', 'eniluzt@qq.com', null, null, '2016-10-13 23:41:33', '2016-10-13 23:41:33');
-INSERT INTO `user` VALUES ('2', 'test', 'test@qq.com', null, null, '2016-10-13 18:14:40', '2016-10-13 18:14:40');
-
+INSERT INTO `user` VALUES ('1', 'admin', 'eniluzt@qq.com', '27ad28b980affe8c453e4f65fadcba45624b6a01', 'a96cdd2daff763cbab9028f2730d83a6cd5ddb93', '2016-10-14 23:24:05', '2016-10-13 23:41:33');
+INSERT INTO `user` VALUES ('2', 'test', 'test@qq.com', '456f6db30afdfa0aaf85f8b6390111c743bacdaf', 'ff559d6a2a9d49dd0fa49a73532decd5cd829c1f', '2016-10-14 23:26:14', '2016-10-14 23:24:41');
 -- ----------------------------
 -- Records of user_role
 -- ----------------------------

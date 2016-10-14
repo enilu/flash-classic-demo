@@ -42,46 +42,46 @@
 
 
 			<ul class="nav navbar-nav">
-				<%--<li class="dropdown">--%>
-					<%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">设置 <span class="caret"></span></a>--%>
-					<%--<ul class="dropdown-menu" role="menu">--%>
-						<%--<li><a href="/profile">个人信息</a></li>--%>
-						<%--<li class="divider"></li>--%>
-						<%--<li><a href="#">偏好设置</a></li>--%>
-					<%--</ul>--%>
-				<%--</li>--%>
-				<%--<li class="dropdown">--%>
-					<%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">主题 <span class="caret"></span></a>--%>
-					<%--<ul class="dropdown-menu" role="menu">--%>
-						<%--<li><a href="/theme/simplenso">Simplenso</a></li>--%>
-						<%--<li><a href="#">Acme</a></li>--%>
-						<%--<li><a href="/theme/adminLTE">AdminLTE</a></li>--%>
-					<%--</ul>--%>
-				<%--</li>--%>
-				<%--<li><a href="/profile">个人信息</a></li>--%>
-				<%--<li><a href="#">帮助</a></li>--%>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">设置 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="/profile">个人信息</a></li>
+						<li class="divider"></li>
+						<li><a href="#">偏好设置</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">主题 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="/theme/simplenso">Simplenso</a></li>
+						<li><a href="/theme/acme">Acme</a></li>
+						<li><a href="/theme/adminLTE">AdminLTE</a></li>
+					</ul>
+				</li>
+				<li><a href="/profile">个人信息</a></li>
+				<li><a href="#">帮助</a></li>
 			</ul>
 
 
-			<%--<form class="navbar-form navbar-left" role="search">--%>
-				<%--<div class="input-group">--%>
-					<%--<input type="text" id="searchInput" placeholder="Search" id="navbar-search-input" class="form-control">--%>
-					<%--<span class="input-group-btn">--%>
-					  <%--<button type="button" class="btn btn-info btn-flat" onclick="searchClick();">搜索</button>--%>
-					<%--</span>--%>
-					<%--<script>--%>
-						<%--function searchClick(){--%>
-							<%--var searchInput = $("#searchInput").val();--%>
-							<%--alert(searchInput);--%>
-						<%--}--%>
-					<%--</script>--%>
-				<%--</div>--%>
-			<%--</form>--%>
+			<form class="navbar-form navbar-left" role="search">
+				<div class="input-group">
+					<input type="text" id="searchInput" placeholder="Search" id="navbar-search-input" class="form-control">
+					<span class="input-group-btn">
+					  <button type="button" class="btn btn-info btn-flat" onclick="searchClick();">搜索</button>
+					</span>
+					<script>
+						function searchClick(){
+							var searchInput = $("#searchInput").val();
+							alert(searchInput);
+						}
+					</script>
+				</div>
+			</form>
 
 			<!-- Navbar Right Menu -->
 			<div class="navbar-custom-menu">
 				<ul class="nav navbar-nav">
-<%--
+
 					<!-- Notifications Menu -->
 					<!-- 头部通知显示 -->
 					<li class="dropdown notifications-menu">
@@ -172,7 +172,7 @@
 							</li>
 						</ul>
 					</li>
---%>
+
 					<!-- User Account Menu -->
 					<!-- 头部用户信息显示 -->
 					<li class="dropdown user user-menu">
@@ -199,17 +199,17 @@
 								</p>
 							</li>
 							<!-- Menu Body -->
-							<%--<li class="user-body">--%>
-								<%--<div class="col-xs-4 text-center">--%>
-									<%--<a href="#">快捷操作1</a>--%>
-								<%--</div>--%>
-								<%--<div class="col-xs-4 text-center">--%>
-									<%--<a href="#">快捷操作2</a>--%>
-								<%--</div>--%>
-								<%--<div class="col-xs-4 text-center">--%>
-									<%--<a href="#">快捷操作3</a>--%>
-								<%--</div>--%>
-							<%--</li>--%>
+							<li class="user-body">
+								<div class="col-xs-4 text-center">
+									<a href="#">快捷操作1</a>
+								</div>
+								<div class="col-xs-4 text-center">
+									<a href="#">快捷操作2</a>
+								</div>
+								<div class="col-xs-4 text-center">
+									<a href="#">快捷操作3</a>
+								</div>
+							</li>
 							<!-- Menu Footer-->
 							<li class="user-footer">
 								<div class="pull-left">

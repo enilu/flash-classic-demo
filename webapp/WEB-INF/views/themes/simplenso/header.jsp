@@ -60,8 +60,10 @@
 								<b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="theme-switch-default" href="#">Simplenso</a></li>
-								<li><a class="theme-switch-acme" href="#">Acme</a></li>
+								<li><a href="/theme/simplenso">Simplenso</a></li>
+								<li><a href="/theme/acme">Acme</a></li>
+								<li><a href="/theme/adminLTE">AdminLTE</a></li>
+
 							</ul>
 						</li>
 						

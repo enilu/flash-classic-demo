@@ -3,6 +3,7 @@ package cn.enilu.flash.common.controller;
 import cn.enilu.flash.core.db.RecordNotFoundException;
 import cn.enilu.flash.common.web.MenuList;
 import cn.enilu.flash.web.taglib.Breadcrumb;
+import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -19,7 +20,13 @@ public class BaseController extends cn.enilu.flash.web.BaseController {
     
     @ModelAttribute("theme")
     public String getTheme() {
-        return "adminLTE";
+        Object theme = getRequest().getSession().getAttribute("theme");
+        if(theme==null){
+            getRequest().getSession().setAttribute("theme","adminLTE");
+            theme = "adminLTE";
+        }
+
+        return theme.toString();
     }
     
     @ModelAttribute("menus")
