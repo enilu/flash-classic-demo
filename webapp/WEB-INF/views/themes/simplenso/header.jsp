@@ -27,7 +27,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="/">DEMO</a>
+				<a class="brand" href="/">后台管理系统</a>
 				<div class="btn-group pull-right">
 					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 						<i class="icon-user"></i> ${currentUser.name}
@@ -67,7 +67,7 @@
 							</ul>
 						</li>
 						
-						<li><a href="#">帮助</a></li>
+						<li><a target="_blank" href="https://github.com/enilu/flash-demo/blob/master/README.md">帮助</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>

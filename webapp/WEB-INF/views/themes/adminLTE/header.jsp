@@ -59,7 +59,7 @@
 					</ul>
 				</li>
 				<li><a href="/profile">个人信息</a></li>
-				<li><a href="#">帮助</a></li>
+				<li><a target="_blank" href="https://github.com/enilu/flash-demo/blob/master/README.md">帮助</a></li>
 			</ul>
 
 
@@ -201,7 +201,7 @@
 							<!-- Menu Body -->
 							<li class="user-body">
 								<div class="col-xs-4 text-center">
-									<a href="#">快捷操作1</a>
+									<a target="_blank" href="https://github.com/enilu/flash-demo/blob/master/README.md">帮助</a>
 								</div>
 								<div class="col-xs-4 text-center">
 									<a href="#">快捷操作2</a>

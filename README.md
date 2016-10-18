@@ -41,3 +41,18 @@ web-flash : [https://github.com/enilu/web-flash](https://github.com/enilu/web-fl
          -w,--war <arg>                         war directory
          
 - 访问系统http://localhost:8080 ,用户名/密码：admin/admin
+
+## 界面预览
+
+- 登录
+
+![login](doc/login.png)
+
+- 日志列表
+
+![log](doc/log.png)
+
+
+- 日志列表（主题2）
+
+![log2](doc/log2.png)
