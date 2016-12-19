@@ -19,7 +19,7 @@
         <jackson-version>2.4.3</jackson-version>
         <slf4j-version>1.7.7</slf4j-version>
         <jetty-version>9.2.5.v20141112</jetty-version>
-        <web-flash-version>1.0-SNAPSHOT</web-flash-version>
+        <web-flash-version>1.0</web-flash-version>
     </properties>
     <dependencies>
         <dependency>

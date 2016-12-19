@@ -12,15 +12,6 @@ web-flash : [https://github.com/enilu/web-flash](https://github.com/enilu/web-fl
 * [validation](https://github.com/jzaefferer/jquery-validation) 前端数据校验 
 
 ## 使用方式
-
-- 下载web-flash项目
-
-        git clone https://github.com/enilu/web-flash.git
- 
- 
-- 将web-flash安装到本地maven仓库
-  
-        mvn install
    
 - 初始话数据库(mysql)
  
@@ -28,7 +19,7 @@ web-flash : [https://github.com/enilu/web-flash](https://github.com/enilu/web-fl
         然后执行db目录中的sql文件
  
 - 更改config.properties中的数据库连接信息
-- 导入Intellij IDEA 或者eclipse
+- 将本项目导入Intellij IDEA 或者eclipse
 - 运行cn.enilu.flash.web.Main类，系统使用默认端口8080启动,可以通过命令加入更多启动参数：
 
         usage: Main
