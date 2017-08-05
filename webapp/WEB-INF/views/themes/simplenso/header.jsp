@@ -61,7 +61,6 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/theme/simplenso">Simplenso</a></li>
-								<li><a href="/theme/acme">Acme</a></li>
 								<li><a href="/theme/adminLTE">AdminLTE</a></li>
 
 							</ul>
