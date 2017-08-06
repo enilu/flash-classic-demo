@@ -16,7 +16,7 @@
                         <list>
                             <bean class="cn.enilu.flash.common.web.Menu$MenuItem">
                                 <property name="name" value="用户管理"/>
-                                <property name="link" value="/users"/>
+                                <property name="link" value="/system/users"/>
                                 <property name="icon" value="icon-user"/>
                                 <property name="permissions">
                                     <set>
@@ -26,7 +26,7 @@
                             </bean>
                             <bean class="cn.enilu.flash.common.web.Menu$MenuItem">
                                 <property name="name" value="角色管理"/>
-                                <property name="link" value="/roles"/>
+                                <property name="link" value="/system/roles"/>
                                 <property name="icon" value="icon-list"/>
                                 <property name="permissions">
                                     <set>
@@ -36,7 +36,7 @@
                             </bean>
                             <bean class="cn.enilu.flash.common.web.Menu$MenuItem">
                                 <property name="name" value="权限管理"/>
-                                <property name="link" value="/permissions"/>
+                                <property name="link" value="/system/permissions"/>
                                 <property name="icon" value="icon-user"/>
                                 <property name="permissions">
                                     <set>
@@ -46,7 +46,7 @@
                             </bean>
                             <bean class="cn.enilu.flash.common.web.Menu$MenuItem">
                                 <property name="name" value="日志管理"/>
-                                <property name="link" value="/logss"/>
+                                <property name="link" value="/system/logss"/>
                                 <property name="icon" value="icon-list"/>
                                 <property name="permissions">
                                     <set>

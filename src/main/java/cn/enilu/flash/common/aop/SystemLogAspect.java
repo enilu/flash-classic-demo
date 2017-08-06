@@ -2,10 +2,10 @@ package cn.enilu.flash.common.aop;
 
 import cn.enilu.flash.common.utils.IpUtil;
 import cn.enilu.flash.core.util.JsonUtil;
-import cn.enilu.flash.common.entity.Logs;
-import cn.enilu.flash.common.entity.User;
-import cn.enilu.flash.common.service.LogsService;
-import cn.enilu.flash.common.service.UserContextLoader;
+import cn.enilu.flash.common.modules.system.entity.Logs;
+import cn.enilu.flash.common.modules.system.entity.User;
+import cn.enilu.flash.common.modules.system.service.LogsService;
+import cn.enilu.flash.common.modules.system.service.UserContextLoader;
 import cn.enilu.flash.web.auth.UserContext;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;

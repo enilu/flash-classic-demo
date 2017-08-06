@@ -1,8 +1,8 @@
 package cn.enilu.flash.common.controller;
 
 import cn.enilu.flash.common.aop.SystemControllerLog;
-import cn.enilu.flash.common.entity.User;
-import cn.enilu.flash.common.service.UserService;
+import cn.enilu.flash.common.modules.system.entity.User;
+import cn.enilu.flash.common.modules.system.service.UserService;
 import cn.enilu.flash.web.auth.UserContext;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Controller;

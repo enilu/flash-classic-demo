@@ -2,17 +2,17 @@
 -- ----------------------------
 -- Records of logs
 -- ----------------------------
-INSERT INTO `logs` VALUES ('1', '1', 'admin', '添加用户', '2016-10-13 18:04:59', 'cn.enilu.flash.common.controller.UserController', 'create', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('2', '1', 'admin', '更新用户', '2016-10-13 18:14:40', 'cn.enilu.flash.common.controller.UserController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('3', '1', 'admin', '更新权限', '2016-10-13 18:14:51', 'cn.enilu.flash.common.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('4', '1', 'admin', '修改权限', '2016-10-13 18:15:09', 'cn.enilu.flash.common.controller.UserController', 'savePermissions', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('5', '1', 'admin', '更新权限', '2016-10-13 23:25:06', 'cn.enilu.flash.common.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('6', '1', 'admin', '更新权限', '2016-10-13 23:25:12', 'cn.enilu.flash.common.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('7', '1', 'admin', '更新角色', '2016-10-13 23:25:46', 'cn.enilu.flash.common.controller.RoleController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('8', '1', 'admin', '更新角色', '2016-10-13 23:26:02', 'cn.enilu.flash.common.controller.RoleController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('9', '1', 'admin', '更新角色', '2016-10-13 23:26:36', 'cn.enilu.flash.common.controller.RoleController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('10', '1', 'admin', '更新权限', '2016-10-13 23:27:27', 'cn.enilu.flash.common.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
-INSERT INTO `logs` VALUES ('11', '1', 'admin', '更新用户', '2016-10-13 23:41:34', 'cn.enilu.flash.common.controller.UserController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('1', '1', 'admin', '添加用户', '2016-10-13 18:04:59', 'cn.enilu.flash.common.modules.system.controller.UserController', 'create', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('2', '1', 'admin', '更新用户', '2016-10-13 18:14:40', 'cn.enilu.flash.common.modules.system.controller.UserController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('3', '1', 'admin', '更新权限', '2016-10-13 18:14:51', 'cn.enilu.flash.common.modules.system.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('4', '1', 'admin', '修改权限', '2016-10-13 18:15:09', 'cn.enilu.flash.common.modules.system.controller.UserController', 'savePermissions', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('5', '1', 'admin', '更新权限', '2016-10-13 23:25:06', 'cn.enilu.flash.common.modules.system.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('6', '1', 'admin', '更新权限', '2016-10-13 23:25:12', 'cn.enilu.flash.common.modules.system.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('7', '1', 'admin', '更新角色', '2016-10-13 23:25:46', 'cn.enilu.flash.common.modules.system.controller.RoleController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('8', '1', 'admin', '更新角色', '2016-10-13 23:26:02', 'cn.enilu.flash.common.modules.system.controller.RoleController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('9', '1', 'admin', '更新角色', '2016-10-13 23:26:36', 'cn.enilu.flash.common.modules.system.controller.RoleController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('10', '1', 'admin', '更新权限', '2016-10-13 23:27:27', 'cn.enilu.flash.common.modules.system.controller.PermissionController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
+INSERT INTO `logs` VALUES ('11', '1', 'admin', '更新用户', '2016-10-13 23:41:34', 'cn.enilu.flash.common.modules.system.controller.UserController', 'update', '0:0:0:0:0:0:0:1', null, null, null);
 
 -- ----------------------------
 -- Records of permission
