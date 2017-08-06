@@ -1,6 +1,6 @@
-package cn.enilu.flash.common.system.service;
+package cn.enilu.flash.common.modules.system.service;
 
-import cn.enilu.flash.common.system.entity.SysNotification;
+import cn.enilu.flash.common.modules.system.entity.SysNotification;
 import cn.enilu.flash.core.db.Pagination;
 import cn.enilu.flash.core.db.Query;
 import cn.enilu.flash.core.service.EntityService;

@@ -1,4 +1,4 @@
-package cn.enilu.flash.common.system.entity;
+package cn.enilu.flash.common.modules.system.entity;
 
 
 import com.google.common.base.MoreObjects;

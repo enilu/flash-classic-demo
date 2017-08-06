@@ -1,8 +1,8 @@
-package cn.enilu.flash.common.system.controller;
+package cn.enilu.flash.common.modules.system.controller;
 
 import cn.enilu.flash.common.controller.BaseController;
-import cn.enilu.flash.common.system.entity.SysNotification;
-import cn.enilu.flash.common.system.service.SysNotificationService;
+import cn.enilu.flash.common.modules.system.entity.SysNotification;
+import cn.enilu.flash.common.modules.system.service.SysNotificationService;
 import cn.enilu.flash.core.db.Pagination;
 import cn.enilu.flash.core.lang.Beans;
 import cn.enilu.flash.core.util.JsonResponse;
