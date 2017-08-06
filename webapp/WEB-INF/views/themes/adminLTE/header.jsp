@@ -58,7 +58,13 @@
 					</ul>
 				</li>
 				<li><a href="/profile">个人信息</a></li>
-				<li><a target="_blank" href="https://github.com/enilu/flash-demo/blob/master/README.md">帮助</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">开发帮助 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a target="_blank" href="/assets/components/index.html">组件例子</a></li>
+						<li><a target="_blank" href="https://github.com/enilu/flash-demo/blob/master/README.md">简介</a></li>
+					</ul>
+				</li>
 			</ul>
 
 
