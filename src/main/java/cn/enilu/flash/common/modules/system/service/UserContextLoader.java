@@ -1,10 +1,11 @@
 package cn.enilu.flash.common.modules.system.service;
 
-import cn.enilu.flash.core.db.DB;
 import cn.enilu.flash.common.modules.system.entity.Permission;
+import cn.enilu.flash.common.modules.system.entity.SysNotification;
 import cn.enilu.flash.common.modules.system.entity.User;
+import cn.enilu.flash.common.modules.system.model.UserContext;
+import cn.enilu.flash.core.db.DB;
 import cn.enilu.flash.web.auth.IUserContextLoader;
-import cn.enilu.flash.web.auth.UserContext;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -35,7 +36,8 @@ public class UserContextLoader implements IUserContextLoader {
                 .segment("user_role.user_id = ?", user.getId())
                 .all(String.class);
         userContext.setPermissions(new HashSet<String>(permissionNames));
-        
+        List<SysNotification> notifications = db.from(SysNotification.class).where("user_id",user.getId()).all(SysNotification.class);
+        userContext.setNotifications(notifications);
         return userContext;
     }
 }

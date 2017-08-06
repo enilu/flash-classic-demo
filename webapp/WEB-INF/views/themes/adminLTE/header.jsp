@@ -45,7 +45,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">设置 <span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="/profile">个人信息</a></li>
+						<li><a href="/system/profile">个人信息</a></li>
 						<li class="divider"></li>
 						<li><a href="#">偏好设置</a></li>
 					</ul>
@@ -93,29 +93,22 @@
 						<!-- Menu toggle button -->
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="fa fa-bell-o"></i>
-							<span class="label label-warning">3</span>
+							<span class="label label-warning">${fn:length(userContext.notifications)}</span>
 						</a>
 						<ul class="dropdown-menu">
-							<li class="header">你有3条通知</li>
+							<li class="header">你有${fn:length(userContext.notifications)}条通知</li>
 							<li>
 								<!-- Inner Menu: contains the notifications -->
 								<ul class="menu">
 									<!-- start notification -->
+									<c:forEach items="${userContext.notifications}" var="rec">
 									<li>
-										<a href="#">
-											<i class="fa fa-bullhorn text-aqua"></i> 通知1
+										<a href="/system/sys_notifications/${rec.id}">
+											<i class="fa fa-bullhorn text-aqua"></i> ${rec.title}
 										</a>
 									</li>
-									<li>
-										<a href="#">
-											<i class="fa fa-bullhorn text-aqua"></i> 通知2
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="fa fa-bullhorn text-aqua"></i> 通知3
-										</a>
-									</li>
+									</c:forEach>
+
 									<!-- end notification -->
 								</ul>
 							</li>
@@ -196,7 +189,7 @@
 							<li class="user-header" style="height: auto;">
 								<!-- 用户头像 -->
 								<%--<img src="" class="img-circle" alt="User Image" />--%>
-								<a href="/profile"><i class="glyphicon glyphicon-user"></i></a>
+								<a href="/system/profile"><i class="glyphicon glyphicon-user"></i></a>
 								<p>
 									<!-- 用户角色信息 -->
 									${userContext.user.name}
@@ -232,7 +225,27 @@
 	</header>
 
 	<jsp:include page="/WEB-INF/views/themes/adminLTE/sidebar.jsp"/>
-
+	<div class="modal fade" id="modal-notification">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Default Modal</h4>
+				</div>
+				<div class="modal-body">
+					<p>One fine body&hellip;</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
 		<!-- Main content -->

@@ -39,7 +39,7 @@
 
             <display:table name="user.roles" id="role" class="table table-striped table-bordered  ">
                 <display:column title="角色">
-                    <a href="/roles/${role.id}">${role.name}</a>
+                   ${role.name}
                 </display:column>
                 <display:column title="描述" property="description"/>
             </display:table>
