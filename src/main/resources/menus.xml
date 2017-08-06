@@ -54,6 +54,16 @@
                                     </set>
                                 </property>
                             </bean>
+                            <bean class="cn.enilu.flash.common.web.Menu$MenuItem">
+                                <property name="name" value="通知管理"/>
+                                <property name="link" value="/system/sys_notifications"/>
+                                <property name="icon" value="icon-list"/>
+                                <property name="permissions">
+                                    <set>
+                                        <value>logs.mgmt</value>
+                                    </set>
+                                </property>
+                            </bean>
                         </list>
                     </property>
                 </bean>

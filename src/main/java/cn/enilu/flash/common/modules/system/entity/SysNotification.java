@@ -26,6 +26,8 @@ public class SysNotification {
 	
 	@Column
 	private Long userId;
+	@Column
+	private Integer isRead;
 	
 	public void setId(Long id) {
 		this.id = id;
@@ -65,6 +67,14 @@ public class SysNotification {
 	 
 	public Long getUserId() {
 		return this.userId;
+	}
+
+	public Integer getIsRead() {
+		return isRead;
+	}
+
+	public void setIsRead(Integer isRead) {
+		this.isRead = isRead;
 	}
 
 	@Override

@@ -1,8 +1,8 @@
-<jsp:include page="/WEB-INF/views/system/layouts/header.jsp"/>
+<jsp:include page="/WEB-INF/views/layouts/header.jsp"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
-<%@ taglib uri="http://taglib.zzzhc.com" prefix="z"%>
+<%@taglib prefix="z" uri="http://taglib.enilu.cn"%>
 <div class="row-fluid clearfix">
   <div class="pull-left">
     <h3>系统通知查询</h3>
@@ -32,7 +32,9 @@
 		<a href="/system/sys_notifications/${sysNotification_.id}">${sysNotification_.id}</a>
 	</display:column>
 	<display:column property="title" title="标题" />
+	<display:column property="createTime" title="通知日期" />
+	<display:column property="isRead" title="是否已读" />
 </display:table>
 <z:pagination name="sysNotifications" />
 
-<jsp:include page="/WEB-INF/views/system/layouts/footer.jsp"/>
+<jsp:include page="/WEB-INF/views/layouts/footer.jsp"/>
