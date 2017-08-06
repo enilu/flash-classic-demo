@@ -8,8 +8,8 @@
 
 	<title>${title}	</title>
 
-	<link href="/themes/adminLTE/adminLTE/2.4.0/css/AdminLTE.css" rel="stylesheet">
-	<link href="/themes/adminLTE/adminLTE/2.4.0/css/skins/_all-skins.min.css" rel="stylesheet">
+	<link href="/themes/adminLTE/adminLTE/2.0.3/css/AdminLTE.css" rel="stylesheet">
+	<link href="/themes/adminLTE/adminLTE/2.0.3/css/skins/_all-skins.min.css" rel="stylesheet">
 	<link href="/themes/adminLTE/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 	<link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -58,13 +58,7 @@
 					</ul>
 				</li>
 				<li><a href="/profile">个人信息</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">开发帮助 <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a target="_blank" href="/assets/components/index.html">组件例子</a></li>
-						<li><a target="_blank" href="https://github.com/enilu/flash-demo/blob/master/README.md">简介</a></li>
-					</ul>
-				</li>
+				<li><a target="_blank" href="https://github.com/enilu/flash-demo/blob/master/README.md">帮助</a></li>
 			</ul>
 
 
