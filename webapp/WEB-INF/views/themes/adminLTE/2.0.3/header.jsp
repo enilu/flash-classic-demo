@@ -8,8 +8,8 @@
 
 	<title>${title}	</title>
 
-	<link href="/themes/adminLTE/adminLTE/2.4.0/css/AdminLTE.css" rel="stylesheet">
-	<link href="/themes/adminLTE/adminLTE/2.4.0/css/skins/_all-skins.min.css" rel="stylesheet">
+	<link href="/themes/adminLTE/adminLTE/2.0.3/css/AdminLTE.css" rel="stylesheet">
+	<link href="/themes/adminLTE/adminLTE/2.0.3/css/skins/_all-skins.min.css" rel="stylesheet">
 	<link href="/themes/adminLTE/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 	<link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">

@@ -12,7 +12,7 @@
     <%--</footer>--%>
 
         <script src="/themes/adminLTE/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/themes/adminLTE/adminLTE/2.4.0/js/app.min.js"></script>
+        <script src="/themes/adminLTE/adminLTE/2.0.3/js/app.min.js"></script>
 
         <script src="/assets/modernizr/modernizr.js"></script>
         <script src="/assets/underscore/underscore.js"></script>
